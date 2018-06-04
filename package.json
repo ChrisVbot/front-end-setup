@@ -1,0 +1,38 @@
+{
+  "name": "front-end-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bootstrap": "^4.1.0",
+    "@types/react": "^16.3.16",
+    "@types/react-dom": "^16.0.5",
+    "bootstrap": "^4.1.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "webpack": "^4.10.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.109",
+    "autoprefixer": "^8.6.0",
+    "awesome-typescript-loader": "^5.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "csstype": "^2.5.3",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.10",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "popper": "^1.0.1",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.2",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.21.0",
+    "typescript": "^2.9.1",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack-cli": "^3.0.1",
+    "webpack-manifest-plugin": "^2.0.3"
+  }
+}
