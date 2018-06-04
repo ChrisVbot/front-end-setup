@@ -8,7 +8,8 @@ module.exports = {
   plugins: [new CleanWebpackPlugin(["dist/*.*"])],
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/"
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions
