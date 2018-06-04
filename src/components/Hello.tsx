@@ -7,10 +7,12 @@ export interface HelloProps {
   compiler: String;
   framework: String;
 }
-
-export const Hello = (props: HelloProps) => (
+const Hello = (props: HelloProps) => (
   <h1 className={mainStyles.example}>
     Hello from <p className={helloStyles.firstTitle}>{props.compiler}</p> and{" "}
     <p className={helloStyles.secondTitle}>{props.framework}</p>!
   </h1>
 );
+
+// Export this way for React DevTools
+export { Hello };
