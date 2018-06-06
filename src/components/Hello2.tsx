@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as styles from "./hello.scss";
 
 export interface Props {
   name: string;
@@ -18,7 +19,7 @@ function Hello2({
   }
 
   return (
-    <div className="hello">
+    <div className={styles.firstTitle}>
       <div className="greeting">
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>

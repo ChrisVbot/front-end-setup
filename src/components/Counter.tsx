@@ -1,5 +1,6 @@
 import * as React from "react";
 
+// tslint:disable-next-line:interface-name
 export interface SFCCounterProps {
   label: string;
   count: number;

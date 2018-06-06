@@ -1,7 +1,9 @@
 import * as React from "react";
 
-type Props = { onClick(e: React.MouseEvent<HTMLElement>): void };
+interface IProps {
+  onClick(e: React.MouseEvent<HTMLElement>): void;
+}
 
-const Clicker: React.SFC<Props> = ({ onClick: handleClick, children }) => (
+const Clicker: React.SFC<IProps> = ({ onClick: handleClick, children }) => (
   <button onClick={handleClick}>{children}</button>
 );
