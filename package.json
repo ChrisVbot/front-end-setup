@@ -5,6 +5,10 @@
       "<rootDir>/test-shim.js",
       "<rootDir>/test-setup.js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -20,14 +24,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "test --env=jsdom"
   },
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.1.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
@@ -35,8 +38,10 @@
     "tslint": "^5.10.0",
     "webpack": "^4.10.2"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "devDependencies": {
-    "@types/bootstrap": "^4.1.0",
     "@types/enzyme": "^3.1.10",
     "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^23.0.0",
@@ -53,6 +58,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",
     "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.0",

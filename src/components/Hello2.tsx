@@ -1,7 +1,8 @@
 import * as React from "react";
+import { Hello } from "./Hello";
 import * as styles from "./hello.scss";
 
-export interface Props {
+export interface IProps {
   name: string;
   enthusiasmLevel?: number;
   onIncrement?: () => void;
@@ -13,7 +14,7 @@ function Hello2({
   enthusiasmLevel = 1,
   onIncrement,
   onDecrement
-}: Props) {
+}: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error(`You should be more enthusiastic`);
   }
@@ -24,6 +25,7 @@ function Hello2({
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
       <div>
+        {/* <Hello compiler="TypeScript in Docker!" framework="React" /> */}
         <button onClick={onDecrement}>-</button>
         <button onClick={onIncrement}>+</button>
       </div>

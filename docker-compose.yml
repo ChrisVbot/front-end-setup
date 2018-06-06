@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+
+  client:
+    container_name: example-app
+    image: example-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Start dev server
+    command: "yarn start"
+    # Mount dev folder as read-only volume to detect code changes
+    volumes:
+      - ./src/:/usr/src/app/src
+    # Connect localhost 8080 port to container 8080 port
+    ports:
+      - "8080:8080" 
