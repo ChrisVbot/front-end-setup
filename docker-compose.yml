@@ -8,8 +8,10 @@ services:
       context: .
       dockerfile: Dockerfile
     # Start dev server
-    command: "yarn start"
-    # Mount dev folder as read-only volume to detect code changes
+    command: "yarn webpack-dev-server --host 0.0.0.0 --config webpack.dev.js"
+    environment: 
+    - NODE_ENV=development
+    # Mount src folder as volume to detect code changes
     volumes:
       - ./src/:/usr/src/app/src
     # Connect localhost 8080 port to container 8080 port

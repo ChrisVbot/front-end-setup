@@ -1,5 +1,5 @@
-import * as React from "react";
 import * as enzyme from "enzyme";
+import * as React from "react";
 import Hello2 from "../components/Hello2";
 
 it("renders the correct text when no enthusiasm level is given", () => {

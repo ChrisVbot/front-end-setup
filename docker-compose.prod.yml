@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+
+  client:
+    container_name: example-app
+    image: example-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Builds with Webpack and puts output in /dist directory
+    command: "yarn build"
+    environment: 
+      - NODE_ENV=production
+    volumes:
+      # Mount dist folder so we can build in the Docker container and output to local filesystem
+      - ./dist:/usr/src/app/dist

@@ -1,7 +1,7 @@
-import Hello2 from "../components/Hello2";
-import * as actions from "../actions/";
-import { StoreState } from "../index";
 import { connect, Dispatch } from "react-redux";
+import * as actions from "../actions/";
+import Hello2 from "../components/Hello2";
+import { StoreState } from "../index";
 
 export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
   return {
@@ -14,8 +14,8 @@ export function mapDispatchToProps(
   dispatch: Dispatch<actions.EnthusiasmAction>
 ) {
   return {
-    onIncrement: () => dispatch(actions.incrementEnthusiasm()),
-    onDecrement: () => dispatch(actions.decrementEnthusiasm())
+    onDecrement: () => dispatch(actions.decrementEnthusiasm()),
+    onIncrement: () => dispatch(actions.incrementEnthusiasm())
   };
 }
 
