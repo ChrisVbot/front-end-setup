@@ -24,16 +24,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
-    "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
+    "dev": "NODE_ENV=development webpack --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "test": "jest"
   },
   "license": "MIT",
   "dependencies": {
+    "@types/bootstrap": "^4.1.0",
+    "@types/jquery": "^3.3.2",
+    "@types/popper.js": "^1.11.0",
+    "@types/reactstrap": "^5.0.27",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "popper.js": "^1.14.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
+    "reactstrap": "^6.1.0",
     "redux": "^4.0.0",
     "tslint": "^5.10.0",
     "webpack": "^4.10.2"

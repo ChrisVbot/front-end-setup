@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Button } from "reactstrap";
+import * as styles2 from "../styles/main.scss";
 import { Hello } from "./Hello";
 import * as styles from "./hello.scss";
 
@@ -21,13 +23,14 @@ function Hello2({
 
   return (
     <div className={styles.firstTitle}>
-      <div className="greeting">
+      <div className={styles2.example}>
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
       <div>
         {/* <Hello compiler="TypeScript in Docker!" framework="React" /> */}
         <button onClick={onDecrement}>-</button>
         <button onClick={onIncrement}>+</button>
+        <Button color="danger">Danger!</Button>
       </div>
     </div>
   );

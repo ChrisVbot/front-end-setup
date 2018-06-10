@@ -1,6 +1,6 @@
 import { EnthusiasmAction } from "../actions";
+import { DECREMENT_ENTHUSIASM, INCREMENT_ENTHUSIASM } from "../constants/index";
 import { StoreState } from "../index";
-import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from "../constants/index";
 
 export function enthusiasm(
   state: StoreState,

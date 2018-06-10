@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: Dockerfile
     # Start dev server
-    command: "yarn webpack-dev-server --host 0.0.0.0 --config webpack.dev.js"
+    command: "yarn start"
     environment: 
     - NODE_ENV=development
     # Mount src folder as volume to detect code changes

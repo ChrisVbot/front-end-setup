@@ -1,16 +1,19 @@
+import "normalize.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { createStore } from "redux";
-import { enthusiasm } from "./reducers/index";
-
-// import { Hello } from "./components/Hello";
-import Hello2 from "./containers/Hello2";
 import { Provider } from "react-redux";
+import { createStore } from "redux";
+import Hello2 from "./containers/Hello2";
+import { enthusiasm } from "./reducers/index";
+import * as styles from "./styles/main.scss";
+// import { Hello } from "./components/Hello";
 
 if (process.env.NODE_ENV !== "production") {
+  // tslint:disable-next-line:no-console
   console.log("Looks like we are in development mode!");
 }
 
+// tslint:disable-next-line:interface-name
 export interface StoreState {
   languageName: string;
   enthusiasmLevel: number;
